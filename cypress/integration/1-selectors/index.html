@@ -1,9 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>1 - Finding Elements</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../../tailwind.css" rel="stylesheet" />
   </head>
-  <body>
-    Content goes here.
+
+  <body class="font-sans">
+    <div
+      class="
+        px-8
+        h-12
+        bg-red
+        text-white
+        flex flex-row-reverse
+        justify-between
+        items-center
+      "
+    >
+      <div class="p-2 border">
+        <button>Log in</button>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="px-2 hover:underline">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">About</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">Doctor</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">Bookings</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="h-64 bg-blue flex items-center justify-center">
+        <h2 class="text-white text-6xl">HealthHero</h2>
+      </div>
+      <div class="w-9/12 m-auto py-4">
+        <h2 class="text-3xl">About HealthHero</h2>
+        <p class="py-4">
+          HealthHero brings together human expertise and digital convenience
+          providing remote access to doctors and expert clinicians directly to
+          patients, insurance-policy holders and employees
+        </p>
+        <p class="py-4">
+          We offer a suite of virtual healthcare services delivered 24/7 via
+          phone, video calls and online chat
+        </p>
+        <p class="py-4">
+          A complete mental wellbeing service that integrates several clinically
+          proven counselling approaches from everyday mental wellbeing support
+          to tailored critical incident support
+        </p>
+      </div>
+
+      <div class="w-9/12 m-auto py-4">
+        <h1 class="text-3xl pb-4">Book an appointment</h1>
+        <div class="flex flex-row">
+          <p class="pr-2">Enter your name:</p>
+          <input class="border-2 p-2 rounded-sm border-gray-700 h-8" type="text" placeholder="e.g. Jane Doe" id="input" />
+        </div>
+
+        <div class="p-2 border w-min">
+          <button id="confirm">OK</div>
+        </div>
+
+        <p id="errorMsg" class="hidden text-red">There was an error</p>
+        <p id="successMsg" class="hidden">Your booking is confirmed</p>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
   </body>
 </html>

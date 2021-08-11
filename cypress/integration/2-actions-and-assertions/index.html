@@ -1,9 +1,139 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>2 - Actions + Assertions</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../../tailwind.css" rel="stylesheet" />
   </head>
-  <body>
-    Content goes here.
+
+  <body class="font-sans">
+    <div
+      class="
+        px-8
+        h-12
+        bg-red
+        text-white
+        flex flex-row-reverse
+        justify-between
+        items-center
+      "
+    >
+      <div class="p-2 border">
+        <button>Log in</button>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="px-2 hover:underline">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">About</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">Doctor</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">Bookings</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="h-64 bg-blue flex items-center justify-center">
+        <h2 class="text-white text-6xl">HealthHero</h2>
+      </div>
+      <div class="w-9/12 m-auto py-4">
+        <h2 class="text-3xl">Your profile</h2>
+        <form class="flex flex-col w-96" onsubmit="handleSubmit">
+          <label for="name">Name</label>
+          <input
+            required
+            id="name"
+            class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+            type="text"
+          />
+
+          <label for="age">Age</label>
+          <input
+            class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+            id="age"
+            type="number"
+          />
+
+          <label for="dob">Date of birth</label>
+          <input
+            class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+            id="dob"
+            type="date"
+          />
+
+          <label for="email">Email</label>
+          <input
+            class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+            id="email"
+            type="email"
+          />
+
+          <label for="phone">Phone</label>
+          <input
+            class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+            id="phone"
+            type="tel"
+          />
+
+          <!-- <label for="gender">Gender</label> -->
+          <fieldset id="gender" class="mb-2">
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              name="fav_language"
+              value="male"
+            />
+            <label for="male">Male</label>
+            <br />
+            <input name="gender" type="radio" id="female" value="female" />
+            <label for="css">Female</label>
+            <br />
+            <input
+              name="gender"
+              type="radio"
+              id="non-binary"
+              value="non-binary"
+            />
+            <label for="non-binary">Non-binary</label>
+            <br />
+            <input name="gender" type="radio" id="unknown" value="unknown" />
+            <label for="unknown">Rather not say</label>
+          </fieldset>
+
+          <label for="location">Location</label>
+          <select class="rounded-sm border-2 mb-2 w-60" id="location">
+            <option>England</option>
+            <option>Scotland</option>
+            <option>Wales</option>
+            <option>Northern Ireland</option>
+          </select>
+
+          <button
+            class="text-center w-32 bg-red text-white p-2 rounded-sm my-2"
+            type="submit"
+          >
+            Update Profile
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+      }
+    </script>
   </body>
 </html>

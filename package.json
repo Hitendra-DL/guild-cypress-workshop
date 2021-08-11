@@ -4,7 +4,9 @@
   "description": "Cypress Workshop repo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production tailwindcss -i ./cypress/tailwind.css -o ./tailwind.css",
+    "build:watch": "NODE_ENV=production tailwindcss -i ./cypress/tailwind.css -o ./tailwind.css --watch"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   "homepage": "https://github.com/Hitendra-DL/guild-cypress-workshop#readme",
   "devDependencies": {
     "cypress": "^8.2.0",
+    "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5"
   }
 }
