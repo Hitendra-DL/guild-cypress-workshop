@@ -2,23 +2,88 @@
 <html>
   <head>
     <title>3 - An E2E test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../../tailwind.css" rel="stylesheet" />
   </head>
   <body>
-    Content goes here.
+    <div
+      class="
+        px-8
+        h-12
+        bg-red
+        text-white
+        flex flex-row
+        justify-between
+        items-center
+      "
+    >
+      <div class="flex flex-row">
+        <div class="px-2 hover:underline">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">About</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">Doctor</a>
+        </div>
+        <div class="px-2 hover:underline">
+          <a href="index.html">Bookings</a>
+        </div>
+      </div>
 
-    <form id="form" onsubmit="handleSubmit">
-      <input type="text" id="username" required />
-      <input type="password" id="password" required />
-      <button type="submit">Submit</button>
+      <div class="p-2 border">
+        <button>Log in</button>
+      </div>
+    </div>
+
+    <div class="h-64 bg-blue flex items-center justify-center">
+      <h2 class="text-white text-6xl">HealthHero</h2>
+    </div>
+    <div class="w-9/12 m-auto py-4 flex items-center justify-center">
+      <h2 class="text-3xl">Sign in</h2>
+    </div>
+    <form id="form" class="flex flex-col items-center" onsubmit="handleSubmit">
+      <div>
+        <label class="w-14" for="name"><p>Username</p> </label>
+        <input
+          required
+          id="username"
+          class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+          type="text"
+        />
+      </div>
+      <div>
+        <label class="w-14" for="name"><p>Password</p></label>
+        <input
+          type="password"
+          class="rounded-sm border-2 border-gray-700 mb-2 w-60"
+          id="password"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="text-center w-32 bg-red text-white p-2 rounded-sm my-2"
+      >
+        Submit
+      </button>
     </form>
 
     <script>
+      const path = window.location.pathname.split("/index.html")[0];
+
       function handleSubmit(e) {
         e.preventDefault();
 
         const username = document.getElementById("username").value;
 
-        fetch("https://6e91092b5a1c.ngrok.io", {
+        fetch("https://4a47d98063c8.ngrok.io", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -28,9 +93,11 @@
           }),
         })
           .then((res) => {
+            window.location.href = `${path}/success.html`;
             console.log(res);
           })
           .catch((err) => {
+            window.location.href = `${path}/fail.html`;
             console.log(err);
           });
       }

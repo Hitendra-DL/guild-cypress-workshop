@@ -18,15 +18,11 @@
         h-12
         bg-red
         text-white
-        flex flex-row-reverse
+        flex flex-row
         justify-between
         items-center
       "
     >
-      <div class="p-2 border">
-        <button>Log in</button>
-      </div>
-
       <div class="flex flex-row">
         <div class="px-2 hover:underline">
           <a href="index.html">Home</a>
@@ -40,6 +36,10 @@
         <div class="px-2 hover:underline">
           <a href="index.html">Bookings</a>
         </div>
+      </div>
+
+      <div class="p-2 border">
+        <button>Log in</button>
       </div>
     </div>
 
@@ -69,11 +69,16 @@
         <h1 class="text-3xl pb-4">Book an appointment</h1>
         <div class="flex flex-row">
           <p class="pr-2">Enter your name:</p>
-          <input class="border-2 p-2 rounded-sm border-gray-700 h-8" type="text" placeholder="e.g. Jane Doe" id="input" />
+          <input
+            class="border-2 p-2 rounded-sm border-gray-700 h-8"
+            type="text"
+            placeholder="e.g. Jane Doe"
+            id="input"
+          />
         </div>
 
         <div class="p-2 border w-min">
-          <button id="confirm">OK</div>
+          <button id="confirm">OK</button>
         </div>
 
         <p id="errorMsg" class="hidden text-red">There was an error</p>
