@@ -55,7 +55,7 @@ describe("Actions and Assertions", () => {
       .should("have.value", "Wales");
 
     /*
-    Click the <button type="submit"> and get the 
+    Click the <button type="submit"> and check that the "Your profile has been updated" message is displayed
     */
     cy.get("#success").should("be.empty");
     cy.get("").click(); // change this
