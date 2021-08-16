@@ -1,28 +1,34 @@
 # Selectors
 
 There are a few ways to select elements on a page. The most common ways are by:
+
 - Id
 - Class
 - Type
-___
+- Attribute
+
+---
+
 ## Id
 
-Ids selectors can be targeted by using the `#` symbol preceding the value of the id 
+Ids selectors can be targeted by using the `#` symbol preceding the value of the id
 
 e.g:
 
 ```html
-<input id="firstname" placeholder="Enter your firstname"/>
+<input id="firstname" placeholder="Enter your firstname" />
 ```
 
 The id of this HTML element is `#firstname`
 
 To target this element in Cypress and type into it:
+
 ```js
-cy.get('#firstname').type('Jim');
+cy.get("#firstname").type("Jim");
 ```
 
-___
+---
+
 ## Class
 
 Class can be targeted by using the `.` symbol preceding the value of the class
@@ -30,40 +36,76 @@ Class can be targeted by using the `.` symbol preceding the value of the class
 e.g:
 
 ```html
-<button class="small" name="continue"/>
+<button class="small" name="continue" />
 ```
 
 The class of this HTML element is `.small`
 
 To target this element in Cypress and click on it:
+
 ```js
-cy.get('.small').click();
+cy.get(".small").click();
 ```
 
-___
+---
+
 ## Type
+
 Type selectors are those that target an HTML element, e.g. input, button, div, h1 etc
 
 e.g:
 
 ```html
-<button id="continue" type="submit"/>
+<button id="continue" type="submit" />
 ```
 
 The type of this locator is `button`
 
 To target this element in Cypress and click on it:
+
 ```js
-cy.get('button').click();
+cy.get("button").click();
 ```
 
-___
+---
+
+## Attribute
+
+Attribute selectors are those that target an element's attribute: `type="text"`, `href="index.html"`, etc.
+
+e.g:
+
+```html
+<button id="continue" type="submit" />
+```
+
+The attribute we want to locate the element by is `type="submit"`
+
+To target this element in Cypress and click on it:
+
+```js
+cy.get("[type=submit]").click();
+```
+
+The format for this selector is: `[` + attribute name + `=` + value + `]`. which looks like `[type=submit]` for our button element.
+
+---
+
 <br>
 
 ## Exercise
-Using the pre-defined `selectors.spec.ts` file
-1. Visit the `index.html` page in the `1-selectors` folder 
-2. Select the name input field by id
-3. Type a name into the field
 
-Repeat the exercise by targeting the name input by using the Type and Class of the HTML element.
+### Step 1
+
+- Open Cypress by running `npm run test` in the terminal
+- Run the `1-selectors/selectors.spec.ts` test file
+
+### Step 2
+
+- Open the `selectors.spec.ts` in your code editor
+- Go through each line and fix all the `cy.get("").should()` until the test passes.
+- Do not change any of the text within the `should("")` functions
+
+### Help
+
+If you need a refresher on what the various CSS selectors look like, you can go back to [this online game](https://flukeout.github.io/)

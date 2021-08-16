@@ -4,7 +4,7 @@
   "description": "Cypress Workshop repo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress open",
     "build": "NODE_ENV=production tailwindcss -i ./cypress/tailwind.css -o ./tailwind.css",
     "build:watch": "NODE_ENV=production tailwindcss -i ./cypress/tailwind.css -o ./tailwind.css --watch"
   },
