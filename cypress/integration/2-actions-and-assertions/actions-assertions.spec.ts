@@ -1,3 +1,0 @@
-describe("Actions and assertions", () => {
-
-})

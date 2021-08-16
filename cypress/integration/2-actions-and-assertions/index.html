@@ -49,10 +49,9 @@
       </div>
       <div class="w-9/12 m-auto py-4">
         <h2 class="text-3xl">Your profile</h2>
-        <form class="flex flex-col w-96" onsubmit="handleSubmit">
+        <form id="form" class="flex flex-col w-96" onsubmit="handleSubmit">
           <label for="name">Name</label>
           <input
-            required
             id="name"
             class="rounded-sm border-2 border-gray-700 mb-2 w-60"
             type="text"
@@ -63,6 +62,7 @@
             class="rounded-sm border-2 border-gray-700 mb-2 w-60"
             id="age"
             type="number"
+            max="100"
           />
 
           <label for="dob">Date of birth</label>
@@ -79,22 +79,8 @@
             type="email"
           />
 
-          <label for="phone">Phone</label>
-          <input
-            class="rounded-sm border-2 border-gray-700 mb-2 w-60"
-            id="phone"
-            type="tel"
-          />
-
-          <!-- <label for="gender">Gender</label> -->
           <fieldset id="gender" class="mb-2">
-            <input
-              type="radio"
-              name="gender"
-              id="male"
-              name="fav_language"
-              value="male"
-            />
+            <input type="radio" name="gender" id="male" value="male" />
             <label for="male">Male</label>
             <br />
             <input name="gender" type="radio" id="female" value="female" />
@@ -126,6 +112,7 @@
           >
             Update Profile
           </button>
+          <span id="success"></span>
         </form>
       </div>
     </div>
@@ -133,7 +120,12 @@
     <script>
       function handleSubmit(e) {
         e.preventDefault();
+        const successNotification = document.getElementById("success");
+        successNotification.innerText = "Your profile has been updated";
       }
+
+      const form = document.getElementById("form");
+      form.addEventListener("submit", handleSubmit);
     </script>
   </body>
 </html>
