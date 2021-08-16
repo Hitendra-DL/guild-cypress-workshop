@@ -83,7 +83,7 @@
 
         const username = document.getElementById("username").value;
 
-        fetch("https://4a47d98063c8.ngrok.io", {
+        fetch("https://0f38a93c40cf.ngrok.io", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -93,12 +93,12 @@
           }),
         })
           .then((res) => {
-            window.location.href = `${path}/success.html`;
             console.log(res);
+            window.location.href = `${path}/success.html`;
           })
           .catch((err) => {
-            window.location.href = `${path}/fail.html`;
             console.log(err);
+            window.location.href = `${path}/fail.html`;
           });
       }
 
