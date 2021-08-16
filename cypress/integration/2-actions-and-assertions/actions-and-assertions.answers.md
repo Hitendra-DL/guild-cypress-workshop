@@ -1,6 +1,6 @@
 # Answers
 
-- Get the `<input type="text" />, click it, and type your name
+- Get the `<input type="text" />`, click it, and type your name
 
 ```javascript
 cy.get("[type=text]") // solution
@@ -10,7 +10,7 @@ cy.get("[type=text]") // solution
   .should("be.ok");
 ```
 
-- Get the `<input type="number" />, click it, and type a number
+- Get the `<input type="number" />`, click it, and type a number
 
 ```javascript
 cy.get("[type=number]") // solution
@@ -20,7 +20,7 @@ cy.get("[type=number]") // solution
   .should("be.ok");
 ```
 
-- Get the `<input type="email" />, click it, and type a correctly formatted email
+- Get the `<input type="email" />`, click it, and type a correctly formatted email
 
 ```javascript
 cy.get("[type=email]") // solution
@@ -30,7 +30,7 @@ cy.get("[type=email]") // solution
   .should("be.ok");
 ```
 
-- Get the last <input type="radio"> element and check it
+- Get the last `<input type="radio">` element and check it
 
 ```javascript
 cy.get("[type=radio]") //solution
@@ -40,7 +40,7 @@ cy.get("[type=radio]") //solution
 cy.get("[name=gender]").should((val) => expect(val[3]).to.be.checked);
 ```
 
-- Get the `<input type="date" />, click it, and type a correctly formatted date
+- Get the `<input type="date" />`, click it, and type a correctly formatted date
 
   ```javascript
   cy.get("[type=date]") // solution
@@ -50,7 +50,7 @@ cy.get("[name=gender]").should((val) => expect(val[3]).to.be.checked);
     .should("be.ok");
   ```
 
-- Get the <select>, click it, and click the <option> that contains Wales .
+- Get the `<select>`, click it, and click the `<option>` that contains Wales .
 
 ```javascript
 cy.get("select") // solution
@@ -58,7 +58,7 @@ cy.get("select") // solution
   .should("have.value", "Wales");
 ```
 
-- Click the <button type="submit"> and check that the success message is displayed
+- Click the `<button type="submit">` and check that the success message is displayed
 
 ```javascript
 cy.get("#success").should("be.empty");
