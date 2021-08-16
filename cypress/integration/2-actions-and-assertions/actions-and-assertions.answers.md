@@ -42,13 +42,13 @@ cy.get("[name=gender]").should((val) => expect(val[3]).to.be.checked);
 
 - Get the `<input type="date" />`, click it, and type a correctly formatted date
 
-  ```javascript
-  cy.get("[type=date]") // solution
-    .click()
-    .type("1990-12-12")
-    .invoke("val")
-    .should("be.ok");
-  ```
+```javascript
+cy.get("[type=date]") // solution
+  .click()
+  .type("1990-12-12")
+  .invoke("val")
+  .should("be.ok");
+```
 
 - Get the `<select>`, click it, and click the `<option>` that contains Wales .
 
