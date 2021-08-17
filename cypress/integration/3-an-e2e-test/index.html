@@ -83,7 +83,15 @@
 
         const username = document.getElementById("username").value;
 
-        fetch("https://0f38a93c40cf.ngrok.io", {
+        const handleError = () => {
+          // window.location.href = `${path}/fail.html`;
+        };
+
+        const handleSuccess = () => {
+          // window.location.href = `${path}/success.html`;
+        };
+
+        fetch("https://04d1706016ef.ngrok.io", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -93,12 +101,15 @@
           }),
         })
           .then((res) => {
-            console.log(res);
-            window.location.href = `${path}/success.html`;
+            console.log(res.status);
+            if (res.status === 200) {
+              return handleSuccess();
+            }
+
+            return handleError();
           })
           .catch((err) => {
-            console.log(err);
-            window.location.href = `${path}/fail.html`;
+            handleError();
           });
       }
 
