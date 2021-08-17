@@ -108,6 +108,11 @@ The format for this selector is: `[` + attribute name + `=` + value + `]`. which
 - Go through each line and fix all the `cy.get("").should()` until the test passes.
 - Do not change any of the text within the `should("")` functions
 
+### Bonus exercises
+
+- Once you complete all 8 exercises in `selectors.spec.ts`, why not try exploring some of Cypress' more advanced traversal APIs? You can find some examples in the [traversal.spec.js](../examples/traversal.spec.js) file
+- Look at how you can use functions like `eq()`, `first()`, `next()`, and `parent()`, to select some elements from the test site.
+
 ### Help
 
 If you need a refresher on what the various CSS selectors look like, you can go back to [this online game](https://flukeout.github.io/)
