@@ -4,16 +4,16 @@ You'll put everything you've learnt together to test a full end-to-end flow: log
 
 This is an example of what e2e tests are made for. You'll make our test add credentials to the `username` and `password` fields, and click submit.
 
-You'll then make an assertion to determine whether the correcty behaviour has occurred.
+You'll then make an assertion to determine whether the correct behaviour has occurred.
 
-You won't need to learn any new Cypress tools to complete this exercise
+You won't need to learn any new Cypress commands to complete this exercise
 
 ## Exercise
 
 Using the pre-defined `e2e-test.spec.ts` file
 
-1. Sign in with Valid credentials and check for success
-2. Attempt to Sign in with invalid credentials and check you have not been signed in
+1. Sign in with valid credentials and check for success. You can use the valid username: `cypress-test` and put anything in the password field to login successfully.
+2. Attempt to Sign in with invalid credentials and check you have not been signed in. You can put anything other than the valid username specified in step 1 (and anything in the password field) to get the login to fail.  
 
 ### Bonus
 
