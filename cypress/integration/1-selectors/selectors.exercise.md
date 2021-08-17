@@ -7,6 +7,8 @@ There are a few ways to select elements on a page. The most common ways are by:
 - Type
 - Attribute
 
+You can find the documentation for [getting elements here](https://docs.cypress.io/api/commands/get)
+
 ---
 
 ## Id

@@ -4,6 +4,12 @@ The most common actions that can be performed in Cypress involve:
 - Clicking
 - Typing
 
+You can find documentation:
+- [clicking elements](https://docs.cypress.io/api/commands/click)
+- [typing into inputs](https://docs.cypress.io/api/commands/type)
+- [interacting with select elements](https://docs.cypress.io/api/commands/select)
+- [interacting with checkboxes](https://docs.cypress.io/api/commands/check)
+
 ___
 ## Click
 
