@@ -35,7 +35,7 @@ describe("Selectors", () => {
     cy.get("").should("have.class", "is-last");
 
     /*
-    Get the empty <section>
+    Get the empty <section>. Hint: CSS has a dedicated empty selector
     */
     cy.get("").should("have.id", "empty-section");
 
