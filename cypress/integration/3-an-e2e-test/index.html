@@ -84,14 +84,15 @@
         const username = document.getElementById("username").value;
 
         const handleError = () => {
-          // window.location.href = `${path}/fail.html`;
+          window.location.href = `${path}/fail.html`;
         };
 
         const handleSuccess = () => {
-          // window.location.href = `${path}/success.html`;
+          window.location.href = `${path}/success.html`;
         };
 
-        fetch("https://04d1706016ef.ngrok.io", {
+        // you'll need to roll your own server if you want to run this workshop another time
+        fetch("https://da09d6069fa8.ngrok.io", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
