@@ -5,13 +5,13 @@
 - Get the username input and type in the correct username
 
 ```javascript
-cy.get("input").first().type("cypress-test");
+cy.get("#username").type("cypress-test");
 ```
 
 - Get the password input and type in any password
 
 ```javascript
-cy.get("input").eq(1).type("password1234");
+cy.get("#password").type("password1234");
 ```
 
 - Click the submit button
@@ -25,13 +25,13 @@ cy.get("button[type=submit]").click();
 - Get the username input and type in an incorrect username
 
 ```javascript
-cy.get("input").first().type("bad-username");
+cy.get("#username").type("bad-username");
 ```
 
 - Get the password input and type in any password
 
 ```javascript
-cy.get("input").eq(1).type("password1234");
+cy.get("#password").type("password1234");
 ```
 
 - Click the submit button

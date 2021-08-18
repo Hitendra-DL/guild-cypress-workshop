@@ -47,7 +47,7 @@ describe("E2E test", () => {
     cy.get("h2").contains("Login failed");
   });
 
-  it.only("advanced - intercept the network request", () => {
+  it("advanced - intercept the network request", () => {
     // Create an alias for the request you're intercepting
     // Docs on intercept can be found here: https://docs.cypress.io/api/commands/intercept
     //
