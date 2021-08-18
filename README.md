@@ -10,15 +10,16 @@
 
 
 #### manual download
-- [Go to GitHub](https://github.com/Hitendra-DL/guild-cypress-workshop)
-- click the green "Code" button
-- click "download"
-- open with VSCode
+- click the green "Code" button on this page
+- click "Download ZIP"
+- unzip/extract contents to a new folder
+- open `guild-cypress-workshop` folder with VSCode
 
 ### install dependencies
 
-- `npm install`
+- Navigate to `guild-cypress-workshop` in command prompt/terminal
+- Type the following command: `npm install`
 
-### run tests
+### Open Cypress test runner
 
 - `npm run test`
