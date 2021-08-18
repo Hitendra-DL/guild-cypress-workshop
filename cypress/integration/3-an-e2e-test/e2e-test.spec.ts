@@ -52,5 +52,31 @@ describe("E2E test", () => {
     // Docs on intercept can be found here: https://docs.cypress.io/api/commands/intercept
     //
     // Hint: you can use '*' as the matcher for `intercept()`
+
+    // Your cy.intercept() will go here
+
+    // The rest of your e2e test
+    /* 
+    Get the username input and type in the correct username
+    */
+    cy.get("");
+
+    /* 
+    Get the password input and type in any password
+    */
+    cy.get("");
+
+    /* 
+    Click the submit button
+    */
+    cy.get("");
+
+    // Your cy.wait() will go here
+    // Hint: your alias needs to have "@" prepended to it
+
+    /* 
+    If this passes, then your e2e test works! 🙌
+    */
+    cy.get("h2").contains("Welcome to HealthHero");
   });
 });
